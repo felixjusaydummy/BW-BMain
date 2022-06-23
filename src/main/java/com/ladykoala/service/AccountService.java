@@ -28,6 +28,7 @@ public class AccountService {
         ac.setEmail(account.getEmail());
         ac.setContactNo(account.getContactNo());
         ac.setVerified(account.isVerified());
+        ac.setUserType(account.getUserType());
         return ac;
     }
 

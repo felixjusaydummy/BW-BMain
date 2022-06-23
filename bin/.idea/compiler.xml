@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="blockwallet-be" />
+        <module name="blockwallet" />
+        <module name="BlockWalletBE-Main" />
+        <module name="BlockWalletBE-Main - Copy" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BlockWalletBE-Main" options="-parameters" />
+      <module name="BlockWalletBE-Main - Copy" options="-parameters" />
+      <module name="blockwallet" options="-parameters" />
+      <module name="blockwallet-be" options="-parameters" />
+    </option>
+  </component>
+</project>

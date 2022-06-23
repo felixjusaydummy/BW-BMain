@@ -51,5 +51,8 @@ public class AccountDao {
 
     @Column
     private String cordakycid;
+
+    @Column
+    private String userType;
 }
 

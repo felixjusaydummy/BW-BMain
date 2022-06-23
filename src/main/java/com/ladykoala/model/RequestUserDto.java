@@ -20,6 +20,7 @@ public class RequestUserDto {
     private String address;
     private String email;
     private String contactNo;
+    private String userType;
 
 }
 

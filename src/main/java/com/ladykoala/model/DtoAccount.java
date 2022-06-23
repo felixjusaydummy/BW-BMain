@@ -18,4 +18,5 @@ public class DtoAccount {
     private String contactNo;
     private boolean verified;
     private Date birthday;
+    private String userType;
 }

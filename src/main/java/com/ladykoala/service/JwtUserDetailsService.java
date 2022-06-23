@@ -51,6 +51,8 @@ public class JwtUserDetailsService implements UserDetailsService {
 			ac.setEmail(user.getEmail());
 			ac.setContactNo(user.getContactNo());
 			ac.setVerified(false);
+			ac.setUserType(user.getUserType());
+
 			accountDao.save(ac);
 
 			return u;

@@ -1,5 +1,12 @@
 package com.ladykoala.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@Getter
+@Setter
 public class RequestApplyLoan {
 
     private long walletAccountId;
@@ -7,9 +14,8 @@ public class RequestApplyLoan {
     private String amount;
     private String paymentTerms;
     private String occupattion;
-    private String grossIncomde;
+    private String grossIncome;
     private String kycId;
 
     private String bankName;
-    private String bankAccount;
 }

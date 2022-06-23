@@ -5,6 +5,7 @@ import com.ladykoala.model.RequestApplyLoan;
 import com.ladykoala.model.RequestCashIn;
 import com.ladykoala.model.ResponseCashIn;
 import com.ladykoala.service.AccountService;
+import com.ladykoala.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 public class LoanController {
     @Autowired
     AccountService accountService;
+
+    @Autowired
+    LoanService loanService;
 
     @RequestMapping(value = "/loan/getloans", method = RequestMethod.GET)
     public void getLoans(HttpServletResponse response) {
@@ -30,8 +34,7 @@ public class LoanController {
         String username = response.getHeader("username");
         long userid = Long.parseLong(response.getHeader("userid"));
         try{
-//            ResponseCashIn res = bankAccountService.cashIn(dto, userid);
-            return "Done";
+            return loanService.applyLoan(dto);
         }catch (Exception ex){
             ex.printStackTrace();
             throw new Exception("[LoanController][CashIn] Internal Server Error");
